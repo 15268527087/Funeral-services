@@ -1,0 +1,72 @@
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+*.whl
+
+# ===== 测试 / 覆盖率 =====
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# ===== 缓存 / 类型检查 / Notebook =====
+.ruff_cache/
+.mypy_cache/
+.dmypy.json
+.ipynb_checkpoints/
+
+# ===== 虚拟环境 =====
+.venv/
+venv/
+env/
+ENV/
+
+# ===== 环境变量与密钥（保留模板文件）=====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ===== 模型权重 / 微调产物（models/ 约 6.3G，禁止入库）=====
+models/
+checkpoints/
+*.safetensors
+*.bin
+*.ckpt
+*.pth
+*.onnx
+
+# ===== 评测产物 / 原始数据 =====
+eval/reports/
+data/raw/
+data/processed/
+
+# ===== 日志 =====
+*.log
+logs/
+
+# ===== IDE / 编辑器 =====
+.idea/
+.vscode/
+.claude/settings.local.json
+.claude/*.local.json
+*.swp
+*.swo
+
+# ===== Node（若引入前端工具链）=====
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ===== 操作系统 =====
+.DS_Store
+Thumbs.db
+desktop.ini

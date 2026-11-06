@@ -1,0 +1,26 @@
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: everrag
+      MYSQL_DATABASE: everrag
+    ports:
+      - "3306:3306"
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-peverrag"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+# Milvus 在阶段 2 接入；MVP 使用 data/samples 下的内存检索。
+# 届时按 NEW_README 第 4.5 节增加 etcd / minio / milvus 三个服务。

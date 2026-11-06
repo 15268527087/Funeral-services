@@ -1,0 +1,32 @@
+knowledge_bases:
+  funeral_service:
+    path: data/samples/funeral_service.jsonl
+    required_metadata:
+      - doc_id
+      - kb_id
+      - doc_type
+      - title
+      - content
+      - access_level
+      - visible_to_roles
+  regulation:
+    path: data/samples/regulation.jsonl
+    required_metadata:
+      - doc_id
+      - regulation_id
+      - article_no
+      - authority
+      - effective_date
+      - access_level
+      - visible_to_roles
+  cultural_custom:
+    path: data/samples/cultural_custom.jsonl
+    required_metadata:
+      - doc_id
+      - region
+      - ethnicity_religion
+      - access_level
+      - visible_to_roles
+
+faq:
+  path: data/samples/faq.jsonl

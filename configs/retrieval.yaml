@@ -1,0 +1,13 @@
+retrieval:
+  # bm25 | memory；memory 为阶段 1 的内存词法检索 fallback
+  backend: bm25
+  top_k: 5
+  min_score: 0.15  # memory 后端使用：覆盖率分数，0–1 有界
+  # bm25 后端使用：BM25 原始分，无上界；不可与 min_score 跨后端复用
+  min_score_bm25: 0.15
+  regulation_min_score: 0.05  # search_regulation 使用：memory 覆盖率分数
+  collections:
+    funeral_service: data/samples/funeral_service.jsonl
+    regulation: data/samples/regulation.jsonl
+    cultural_custom: data/samples/cultural_custom.jsonl
+  faq_path: data/samples/faq.jsonl

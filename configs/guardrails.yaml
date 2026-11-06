@@ -1,0 +1,28 @@
+crisis_keywords:
+  - "不想活"
+  - "活不下去"
+  - "自杀"
+  - "轻生"
+  - "结束生命"
+  - "自残"
+  - "一起走"
+
+injection_patterns:
+  - "忽略以上指令"
+  - "忽略之前"
+  - "ignore previous"
+  - "system prompt"
+  - "系统提示"
+  - "泄露提示词"
+  - "越狱"
+
+banned_output_patterns:
+  - "保证办理"
+  - "百分百"
+  - "绝对没问题"
+  - "包过"
+
+pii_patterns:
+  id_card: '(?<!\d)\d{17}[\dXx](?!\d)'
+  phone: '(?<!\d)1[3-9]\d{9}(?!\d)'
+  email: '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}'

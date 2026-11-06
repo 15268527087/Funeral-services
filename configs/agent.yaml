@@ -1,0 +1,17 @@
+agent:
+  max_steps: 12
+  max_tool_calls: 8
+  max_replans: 2
+  max_revisions: 1
+  min_evidence_docs: 1
+  min_retrieval_score: 0.15
+  faq_fast_path_threshold: 0.85
+  crisis_hotline: "12356"
+
+llm:
+  provider: "mock"          # mock | deepseek | openai_compatible
+  model: "deepseek-chat"
+  base_url: "https://api.deepseek.com"
+  api_key: ""
+  temperature: 0.2
+  timeout_s: 15
